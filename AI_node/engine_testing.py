@@ -1,10 +1,10 @@
 import chess
 import chess.engine
-
+#stockfish 11 engine with some setup
 engine_stock = chess.engine.SimpleEngine.popen_uci("~/Documents/stockfish-11-linux/Linux/stockfish_20011801_x64")
 extreme_setup = {'Threads': 10, 'Hash': 5000, 'Skill Level': 20,}
 engine_stock.configure(extreme_setup)
-
+#komodo engine with default setup
 engine_komodo = chess.engine.SimpleEngine.popen_uci("~/Documents/komodo-10_ae4bdf/Linux/komodo-10-linux")
 
 board = chess.Board()
