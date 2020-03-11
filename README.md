@@ -22,18 +22,19 @@ The library, python-chess, is a package for communicating with the engine. The l
 
 ### Code explanation
 
-Due to the python version requirement for using the python-chess package, the environment for running ROS node need to be python3, so the first line is ```#!/usr/bin/env python3```
+Due to the python version requirement for using the python-chess package, the environment for running ROS node need to be python3, so the first line is ```#!/usr/bin/env python3```.
   
 The information published by this node is a string. The picture below shows the chess board's fen string that the node received for searching a move and the published message.
 ![](image/AI_node_publish_info.png)
 
-In general, a message contains move(4 letters), castling(yes or no), capturing(yes or no). For example ```e2e4,no,no```
+In general, a message contains move(4 letters), castling(yes or no), capturing(yes or no). For example ```e2e4,no,no```.
 
 * In move part string, the first two letters present which piece on that position is going to move. The last two letters present the position of the piece will arrive.
 
-* Capturing is the action that piece takes down an opponent's piece
+* Capturing is the action that piece takes down an opponent's piece.
 
 * Castling is a tactic in chess. It can only be applied under the following condition, and it demonstrates by the picture below. When one of the rooks and king is at their original position i.e., king and rook, do not move after the game starts. Between them, there is no other piece. Then, the king can move to either g or c, and the rook on h will jump to f or rook on a will jump to d.
- ![](image/Castling.png)
+
+![](image/Castling.png)
  
 When a pawn reaches the other side of the chessboard edge, it gets the promotion, which this piece can be replaced by the other piece, for example, queen. It does not matter whether this piece is on the board or not. For this situation, the published message is Move(4 letters), is castling(yes or no), is capturing(yes or no), piece type. For example, ```b7b8,no,no,q```, q stands for the queen.
