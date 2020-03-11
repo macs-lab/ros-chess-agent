@@ -37,4 +37,4 @@ In general, a message contains move(4 letters), castling(yes or no), capturing(y
 
 ![](image/Castling.png)
  
-When a pawn reaches the other side of the chessboard edge, it gets the promotion, which this piece can be replaced by the other piece, for example, queen. It does not matter whether this piece is on the board or not. For this situation, the published message is Move(4 letters), is castling(yes or no), is capturing(yes or no), piece type. For example, ```b7b8,no,no,q```, q stands for the queen.
+When a pawn reaches the other side of the chessboard edge, it gets the promotion, which this piece can be replaced by the other piece, for example, queen. It does not matter whether this piece is on the board or not. For this situation, the published message contains move(4 letters), castling(yes or no), capturing(yes or no), and piece type. For example, ```b7b8,no,no,q```, q stands for the queen.
