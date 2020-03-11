@@ -34,5 +34,5 @@ Capturing is that a piece takes down an opponent’s piece
 
 
 Castling is a tactic in chess. It can only be applied under the following condition and it demonstrates by the picture below. When one of the rooks and king is at their original position i.e. king and rook do not move after the game starts. Between them, there is no other piece. Then, the king can move to either g or c and the rook on h will jump to f or rook on a will jump to d.
-![](image/filename%20Castling.png
+ ![](image/filename Castling.png)
  
