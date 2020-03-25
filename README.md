@@ -1,4 +1,4 @@
-# Robot-plays-chess
+# ros-chess-agent
 
 ## AI_node.py
 This node generates the chess move and publishing it in the ROS master. It first subscribes to the ROS topic that has the present chessboard information expressed in fen string and searches the best move for that present chessboard.
