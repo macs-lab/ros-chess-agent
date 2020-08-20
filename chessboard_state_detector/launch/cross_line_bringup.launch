@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="avt_camera" pkg="avt_camera" type="avt_triggering" output="screen">
+        <param name="~cam_IP" type="str" value="169.254.49.41" />
+        <param name="~image_height" type="int" value="1200"/>
+        <param name="~image_width" type="int" value="1600"/>
+        <param name="~exposure_in_us" type="int" value="15000"/>
+        <param name="~trigger_source" type="str" value="FixedRate"/>
+        <param name="~frame_rate" type="double" value="55.0"/>
+        <param name="~balance_white_auto" type="bool" value="false"/>
+        <param name="~exposure_auto" type="bool" value="false"/>
+        <param name="~gain" type="int" value="5"/>
+    </node>
+    <node name="cross_line_drawer" pkg="chessboard_state_detector" type="cross_line_publisher.py" output="screen"/>
+    <node name="rqt_viewer" pkg="rqt_image_view" type="rqt_image_view" output="screen"/>
+</launch>
